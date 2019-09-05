@@ -1,4 +1,5 @@
 import {UI} from './ui.js';
+import {KitchenUI} from './kitchenUI.js';
 import { Storage } from './storage.js';
 
 class Products{
@@ -32,40 +33,42 @@ class Products{
 
 class Kitchen{
     getKitchenProducts(){
-        fetch('../../kitchenProducts.json')
-        .then(response =>{
-            response.json();
-        })
-        .then(data =>{
-            let kitchenProducts = data.items;
-            
-            kitchenProducts.map(item=>{
-                const {title, price} = item.fields;
-                const {id} = item.sys;
-                const image = item.fields.image.fields.file.url;
-                return{title, price, id,image};
+        try{
+            fetch('../../kitchenProducts.json')
+            .then(response =>{
+                return response.json();
+                
             })
-        })
-    }
-}
+            .then(data =>{
+                let kitchenProducts = data.items;
+            
+                kitchenProducts = kitchenProducts.map(item=>{
+                    const {title, price} = item.fields;
+                    const {id} = item.sys;
+                    const image = item.fields.image.fields.file.url;
+                    return{title, price, id,image};
+                })
 
-function exploreJSON(data){
-    let products = data.items;
-    
-    products = products.map(item=>{
-        const {title, price} = item.fields;
-        const {id} = item.sys;
-        const image = item.fields.image.fields.file.url;
-        return{title, price, id, image};
-    })
+                const kitchenUi = new KitchenUI;
+                kitchenUi.displayKitchenProducts(kitchenProducts);
+            })
+        }catch(error){
+            console.error(error);
+        }
+        
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
 
     const products = new Products();
     const ui = new UI();
+    const kitchenUI = new Kitchen();
     //setup app
     ui.setupApp();
     //get all products
     products.getProducts();
+
+    //get products kitchen
+    // kitchenUI.getKitchenProducts();
 });

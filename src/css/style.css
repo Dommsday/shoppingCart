@@ -77,7 +77,6 @@ header{
 /*PART ASIDE
 =======================*/
 aside{
-    border: 4px solid red;
     position: fixed;
     top: 0;
     left:0;
@@ -90,7 +89,6 @@ aside{
 }
 
 .navbar-aside{
-    border: 2px solid blue;
     position: fixed;
     top: 0;
     left: 0;
