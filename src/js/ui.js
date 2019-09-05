@@ -5,15 +5,30 @@ const cartTotal = document.querySelector('.cart-total');
 const cartItems = document.querySelector('.cart-items');
 const cartContent = document.querySelector('.cart-content');
 const cartBtn = document.querySelector('.cart-btn');
+const navIconBar = document.querySelector('.nav-icon-bar');
 const clearCartBtn = document.querySelector('.clear-cart');
 const cartOverlay = document.querySelector('.cart-overlay');
+const asideOverlay = document.querySelector('aside');
+const navAside = document.querySelector('.navbar-aside');
 const cartDOM = document.querySelector('.cart');
 const closeCartBtn = document.querySelector('.close-cart');
+const closeAside = document.querySelector('.close-aside');
 
 let buttonsDom = [];
 let cart= [];
 
 export class UI{
+    
+    setupApp(){
+        cart = Storage.getCart();
+        this.setCartValues(cart);
+        this.populateCart(cart);
+        cartBtn.addEventListener('click', this.showCart);
+        closeCartBtn.addEventListener('click', this.hidenCart);
+        navIconBar.addEventListener('click', this.showAside);
+        closeAside.addEventListener('click', this.hidenAside);
+    }
+
     displayProducts(products){
         let result = ' ';
         products.map(product => {
@@ -96,22 +111,24 @@ export class UI{
         cartContent.appendChild(div);
     }
 
-    setupApp(){
-        cart = Storage.getCart();
-        this.setCartValues(cart);
-        this.populateCart(cart);
-        cartBtn.addEventListener('click', this.showCart);
-        closeCartBtn.addEventListener('click', this.hidenCart);
-    }
-
     showCart(){
         cartOverlay.classList.add('transparentBcg');
         cartDOM.classList.add('showCart');       
     }
 
+    showAside(){
+        asideOverlay.classList.add('transparentBcg');
+        navAside.classList.add('showAside');
+    }
+
     hidenCart(){
         cartOverlay.classList.remove('transparentBcg');
         cartDOM.classList.remove('showCart');
+    }
+
+    hidenAside(){
+        asideOverlay.classList.remove('transparentBcg');
+        navAside.classList.remove('showAside');
     }
 
     populateCart(){
