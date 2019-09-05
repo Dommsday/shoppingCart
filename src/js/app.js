@@ -50,7 +50,7 @@ class Kitchen{
                 })
 
                 const kitchenUi = new KitchenUI;
-                kitchenUi.displayKitchenProducts(kitchenProducts);
+                kitchenUi.selectProductsKitchen();
             })
         }catch(error){
             console.error(error);
