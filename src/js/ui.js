@@ -18,15 +18,21 @@ let buttonsDom = [];
 let cart= [];
 
 export class UI{
-    
+
+    test(){
+        alert('test');
+    }
+
     setupApp(){
         cart = Storage.getCart();
         this.setCartValues(cart);
         this.populateCart(cart);
         cartBtn.addEventListener('click', this.showCart);
         closeCartBtn.addEventListener('click', this.hidenCart);
+        cartOverlay.addEventListener('click', this.hidenCart);
         navIconBar.addEventListener('click', this.showAside);
         closeAside.addEventListener('click', this.hidenAside);
+        asideOverlay.addEventListener('click', this.hidenAside);
     }
 
     displayProducts(products){

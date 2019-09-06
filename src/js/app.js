@@ -20,6 +20,7 @@ class Products{
                 })
 
                 const ui = new UI;
+
                 ui.displayProducts(products);
                 Storage.saveProducts(products);
                 ui.getBagButtons();
@@ -49,9 +50,9 @@ class Kitchen{
                     return{title, price, id,image};
                 })
 
-                const kitchenUi = new KitchenUI;
-                kitchenUi.selectProductsKitchen();
             })
+
+            
         }catch(error){
             console.error(error);
         }
@@ -63,12 +64,14 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     const products = new Products();
     const ui = new UI();
-    const kitchenUI = new Kitchen();
+    const kitchen = new Kitchen();
+
     //setup app
     ui.setupApp();
+
     //get all products
     products.getProducts();
 
     //get products kitchen
-    // kitchenUI.getKitchenProducts();
+    kitchen.getKitchenProducts();
 });

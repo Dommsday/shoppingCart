@@ -3,136 +3,136 @@
       {
         "sys": { "id": "1" },
         "fields": {
-          "title": "queen panel bed",
-          "price": 10.99,
+          "title": "Chambre Premium",
+          "price": 800,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-1.jpeg" } } }
         }
       },
       {
         "sys": { "id": "2" },
         "fields": {
-          "title": "king panel bed",
-          "price": 12.99,
+          "title": "Chambre évasion",
+          "price": 900,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-2.jpeg" } } }
         }
       },
       {
         "sys": { "id": "3" },
         "fields": {
-          "title": "single panel bed",
-          "price": 12.99,
+          "title": "Chambre parentale",
+          "price": 600,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-3.jpeg" } } }
         }
       },
       {
         "sys": { "id": "4" },
         "fields": {
-          "title": "twin panel bed",
-          "price": 22.99,
+          "title": "Chambre enfant",
+          "price": 200,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-4.jpeg" } } }
         }
       },
       {
         "sys": { "id": "5" },
         "fields": {
-          "title": "fridge",
-          "price": 88.99,
+          "title": "Suite parentale",
+          "price": 1000,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-5.jpg" } } }
         }
       },
       {
         "sys": { "id": "6" },
         "fields": {
-          "title": "dresser",
-          "price": 32.99,
+          "title": "Chambre Dark",
+          "price": 1200,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-6.jpg" } } }
         }
       },
       {
         "sys": { "id": "7" },
         "fields": {
-          "title": "couch",
-          "price": 45.99,
+          "title": "Chambre océane",
+          "price": 600,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-7.jpg" } } }
         }
       },
       {
         "sys": { "id": "8" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Chambre zen",
+          "price": 300,
           "image": { "fields": { "file": { "url": "./src/images/bedroom/product-8.jpg" } } }
         }
       },
       {
         "sys": { "id": "9" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Cuisine Standard",
+          "price": 1700,
           "image": { "fields": { "file": { "url": "./src/images/kitchen/product-1.jpg" } } }
         }
       },
       {
         "sys": { "id": "10" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Cuisine familiale",
+          "price": 2500,
           "image": { "fields": { "file": { "url": "./src/images/kitchen/product-2.jpg" } } }
         }
       },
       {
         "sys": { "id": "11" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Cuisine snow",
+          "price": 1600,
           "image": { "fields": { "file": { "url": "./src/images/kitchen/product-3.jpg" } } }
         }
       },
       {
         "sys": { "id": "12" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Cuisine Premimu plus",
+          "price": 3200,
           "image": { "fields": { "file": { "url": "./src/images/kitchen/product-4.jpg" } } }
         }
       },
       {
-        "sys": { "id": "12" },
+        "sys": { "id": "13" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Salon Zen",
+          "price": 1200,
           "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-1.jpg" } } }
         }
       },
       {
-        "sys": { "id": "12" },
+        "sys": { "id": "14" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Salon Premium",
+          "price": 5000,
           "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-2.jpg" } } }
         }
       },
       {
-        "sys": { "id": "12" },
+        "sys": { "id": "15" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Salon Familial",
+          "price": 2500,
           "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-3.jpg" } } }
         }
       },
       {
-        "sys": { "id": "12" },
+        "sys": { "id": "16" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Salon Deluxe",
+          "price": 6000,
           "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-4.jpg" } } }
         }
       },
       {
-        "sys": { "id": "12" },
+        "sys": { "id": "17" },
         "fields": {
-          "title": "table",
-          "price": 33.99,
+          "title": "Salon Fraîcheur",
+          "price": 3000,
           "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-5.jpg" } } }
         }
       }

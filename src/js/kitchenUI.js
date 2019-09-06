@@ -1,8 +1,13 @@
+import { UI } from './ui.js';
+
 const productsDOM = document.querySelector('.products-center');
-const linkKitchen = document.querySelector('.link-kitchen');
 
-export class KitchenUI{
-
+export class KitchenUI extends UI{
+    
+    constructor(){
+        super()
+    }
+ 
     displayKitchenProducts(products){
         let result = ' ';
         products.map(product => {
@@ -21,7 +26,4 @@ export class KitchenUI{
 
     }
 
-    selectProductsKitchen(){
-        linkKitchen.addEventListener('click', this.displayKitchenProducts);
-    }
 }
