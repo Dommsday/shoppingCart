@@ -183,12 +183,61 @@ aside{
     cursor: pointer;
 }
 
+.banner-btn a{
+    text-decoration: none;
+}
+
+.banner-btn a:hover{
+    color: var(--mainBlack);
+}
+
+.banner-btn a:visited{
+    color: var(--mainBlack);
+}
+
 .banner-btn:hover{
     background: transparent;
     color: var(--primaryColor);
 }
 /*END PART BAN
 =======================*/
+
+/*PART ABOUT
+========================*/
+.about{
+    padding: 4rem 0;
+}
+
+.about-title h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 2em;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+
+.about-container{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    grid-column-gap: 1.5rem;
+}
+
+.about-img{
+    display: block;
+    width: 100%;
+    min-height: 192px;
+    padding: 0.5em;
+}
+
+.about-text{
+    font-size: 21px;
+    padding: 0.5em;
+}
+/*END PART ABOUT
+=========================*/
 
 /*PART PRODUCTS
 =======================*/

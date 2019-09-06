@@ -8,6 +8,9 @@
     <!--CSS-->
     <link rel="stylesheet" href="./src/css/style.css" />
 
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
     <!--NavBar-->
@@ -46,15 +49,42 @@
     <section class="ban">
         <div class="banner">
             <h1 class="banner-title">Furniture collection</h1>
-            <button class="banner-btn">shop now</button>
+            <button class="banner-btn"><a href="#allProducts">shop now</a></button>
         </div>
     </section>
     <!--End Ban-->
 
+    <!--About-->
+    <section class="about">
+        <div class="about-title">
+            <h2>Qui sommes-nous</h2>
+        </div>
+
+        <div class="about-container">
+            <div class="about-img">
+                <img src="src/images/about-img.jpg" alt="photo de travail" class="about-img">
+            </div>
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Assumenda dolor tempora asperiores, ut perferendis sequi dolorem totam ipsum quas eos rem recusandae 
+                voluptas quaerat perspiciatis explicabo molestias velit magnam qui.</p><br />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Assumenda dolor tempora asperiores, ut perferendis sequi dolorem totam ipsum quas eos rem recusandae 
+                voluptas quaerat perspiciatis explicabo molestias velit magnam qui.</p><br />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Assumenda dolor tempora asperiores, ut perferendis sequi dolorem totam ipsum quas eos rem recusandae 
+                voluptas quaerat perspiciatis explicabo molestias velit magnam qui.</p>
+            </div>
+
+            
+        </div>
+    </section>
+    <!--End About-->
+
     <!--Products-->
-        <section class="products">
+        <section class="products" id="allProducts">
             <div class="section-title">
-                <h2>Our products</h2>
+                <h2>Nos produits</h2>
             </div>
             <div class="products-center">
                 <!--products-->
@@ -80,7 +110,9 @@
         </div>
     <!--End Cart-->
     <script type="module" src="./src/js/app.js"></script>
-    
+    <script src="./src/js/scrollAnim.js"></script>
     <script src="https://kit.fontawesome.com/4d36ebb982.js"></script>
+
+
 </body>
 </html>
