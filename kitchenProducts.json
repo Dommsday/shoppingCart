@@ -1,7 +1,7 @@
 {
     "items":[
         {
-            "sys": { "id": "9"},
+            "sys": { "id": "9", "amount": "1"},
             "fields": {
               "title": "table",
               "price": 33.99,
@@ -9,7 +9,7 @@
             }
         },
         {
-            "sys": { "id": "10"},
+            "sys": { "id": "10", "amount": "1"},
             "fields": {
               "title": "table",
               "price": 33.99,
@@ -17,7 +17,7 @@
             }
         },
         {
-            "sys": { "id": "11"},
+            "sys": { "id": "11", "amount": "1"},
             "fields": {
               "title": "table",
               "price": 33.99,
@@ -25,7 +25,7 @@
             }
         },
         {
-            "sys": { "id": "12"},
+            "sys": { "id": "12", "amount": "1"},
             "fields": {
               "title": "table",
               "price": 33.99,
