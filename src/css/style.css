@@ -24,6 +24,18 @@ body{
     font-family: "Lato", sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--mainBlack);
+}
+
+a:visited{
+    color: var(--mainBlack);
+}
+
 /*Part HEADER
 =======================*/
 header{

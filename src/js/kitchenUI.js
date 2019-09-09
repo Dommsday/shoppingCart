@@ -1,13 +1,35 @@
 import { UI } from './ui.js';
 
-const productsDOM = document.querySelector('.products-center');
+class Kitchen{
+    getKitchenProducts(){
+        try{
+            fetch('../../kitchenProducts.json')
+            .then(response =>{
+                return response.json();
+                
+            })
+            .then(data =>{
+                let kitchenProducts = data.items;
+            
+                kitchenProducts = kitchenProducts.map(item=>{
+                    const {title, price} = item.fields;
+                    const {id} = item.sys;
+                    const image = item.fields.image.fields.file.url;
+                    return{title, price, id,image};
+                })
+
+                const kitchenUI = new KitchenUI();
+                kitchenUI.displayKitchenProducts(kitchenProducts);
+            })   
+        }catch(error){
+            console.error(error);
+        }
+        
+    }
+}
 
 export class KitchenUI extends UI{
-    
-    constructor(){
-        super()
-    }
- 
+
     displayKitchenProducts(products){
         let result = ' ';
         products.map(product => {
@@ -22,8 +44,18 @@ export class KitchenUI extends UI{
             </article> 
             `
         });
+
+        const productsDOM = document.querySelector('.products-center');
         productsDOM.innerHTML = result;
 
     }
 
 }
+
+document.addEventListener("DOMContentLoaded", () =>{
+
+    const kitchen = new Kitchen()
+
+    //setup app
+    kitchen.getKitchenProducts();
+});

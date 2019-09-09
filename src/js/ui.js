@@ -19,10 +19,6 @@ let cart= [];
 
 export class UI{
 
-    test(){
-        alert('test');
-    }
-
     setupApp(){
         cart = Storage.getCart();
         this.setCartValues(cart);
