@@ -1,34 +1,53 @@
 import { Storage } from './storage.js';
 
-const productsDOM = document.querySelector('.products-center');
-const cartTotal = document.querySelector('.cart-total');
-const cartItems = document.querySelector('.cart-items');
-const cartContent = document.querySelector('.cart-content');
-const cartBtn = document.querySelector('.cart-btn');
-const navIconBar = document.querySelector('.nav-icon-bar');
-const clearCartBtn = document.querySelector('.clear-cart');
-const cartOverlay = document.querySelector('.cart-overlay');
-const asideOverlay = document.querySelector('aside');
-const navAside = document.querySelector('.navbar-aside');
-const cartDOM = document.querySelector('.cart');
-const closeCartBtn = document.querySelector('.close-cart');
-const closeAside = document.querySelector('.close-aside');
+// const productsDOM = document.querySelector('.products-center');
+// const cartTotal = document.querySelector('.cart-total');
+// const cartItems = document.querySelector('.cart-items');
+// const cartContent = document.querySelector('.cart-content');
+// const cartBtn = document.querySelector('.cart-btn');
+// const navIconBar = document.querySelector('.nav-icon-bar');
+// const clearCartBtn = document.querySelector('.clear-cart');
+// const cartOverlay = document.querySelector('.cart-overlay');
+// const asideOverlay = document.querySelector('aside');
+// const navAside = document.querySelector('.navbar-aside');
+// const cartDOM = document.querySelector('.cart');
+// const closeCartBtn = document.querySelector('.close-cart');
+// const closeAside = document.querySelector('.close-aside');
 
-let buttonsDom = [];
-let cart= [];
+// let buttonsDom = [];
+// let cart= [];
 
 export class UI{
 
+    constructor(){
+        this.productsDOM = document.querySelector('.products-center');
+        this.cartTotal = document.querySelector('.cart-total');
+        this.cartItems = document.querySelector('.cart-items');
+        this.cartContent = document.querySelector('.cart-content');
+        this.cartBtn = document.querySelector('.cart-btn');
+        this.navIconBar = document.querySelector('.nav-icon-bar');
+        this.clearCartBtn = document.querySelector('.clear-cart');
+        this.cartOverlay = document.querySelector('.cart-overlay');
+        this.asideOverlay = document.querySelector('aside');
+        this.navAside = document.querySelector('.navbar-aside');
+        this.cartDOM = document.querySelector('.cart');
+        this.closeCartBtn = document.querySelector('.close-cart');
+        this.closeAside = document.querySelector('.close-aside');
+
+        this.buttonsDom = [];
+        this.cart= [];
+    }
+
     setupApp(){
-        cart = Storage.getCart();
-        this.setCartValues(cart);
-        this.populateCart(cart);
-        cartBtn.addEventListener('click', this.showCart);
-        closeCartBtn.addEventListener('click', this.hidenCart);
-        cartOverlay.addEventListener('click', this.hidenCart);
-        navIconBar.addEventListener('click', this.showAside);
-        closeAside.addEventListener('click', this.hidenAside);
-        asideOverlay.addEventListener('click', this.hidenAside);
+        this.cart = Storage.getCart();
+        this.setCartValues(this.cart);
+        this.populateCart(this.cart);
+        this.cartBtn.addEventListener('click', this.showCart);
+        this.closeCartBtn.addEventListener('click', this.hidenCart);
+        this.cartOverlay.addEventListener('click', this.hidenCart);
+        this.navIconBar.addEventListener('click', this.showAside);
+        this.closeAside.addEventListener('click', this.hidenAside);
+        this.asideOverlay.addEventListener('click', this.hidenAside);
     }
 
     displayProducts(products){
@@ -45,16 +64,16 @@ export class UI{
             </article> 
             `
         });
-        productsDOM.innerHTML = result;
+        this.productsDOM.innerHTML = result;
     }
 
     getBagButtons(){
         const buttons = [...document.querySelectorAll('.bag-btn')];
-        buttonsDom = buttons;
+        this.buttonsDom = buttons;
 
         buttons.forEach(button =>{
             let id = button.dataset.id;
-            let inCart = cart.find(item => item.id === id);
+            let inCart = this.cart.find(item => item.id === id);
             if(inCart){
                 button.textContent = "Dans le panier";
                 button.disabled = true;
@@ -68,10 +87,10 @@ export class UI{
 
                 let cartItem = {...Storage.getProduct(id), amount:1};
 
-                cart = [...cart, cartItem];
-                Storage.saveCart(cart);
+                this.cart = [...this.cart, cartItem];
+                Storage.saveCart(this.cart);
                 //set cart values
-                this.setCartValues(cart);
+                this.setCartValues(this.cart);
                 //display cart item
                 this.addCartItem(cartItem);
                 //show the cart
@@ -89,8 +108,8 @@ export class UI{
             itemsTotal += item.amount;
         })
 
-        cartTotal.textContent = parseFloat(tempTotal.toFixed(2));
-        cartItems.textContent = itemsTotal;
+        this.cartTotal.textContent = parseFloat(tempTotal.toFixed(2));
+        this.cartItems.textContent = itemsTotal;
     }
 
     addCartItem(item){
@@ -110,76 +129,91 @@ export class UI{
             </div>
         `
 
-        cartContent.appendChild(div);
+        this.cartContent.appendChild(div);
     }
 
     showCart(){
+        const cartOverlay = document.querySelector('.cart-overlay');
+        const cartDOM = document.querySelector('.cart');
+
         cartOverlay.classList.add('transparentBcg');
         cartDOM.classList.add('showCart');       
     }
 
     showAside(){
+
+        const asideOverlay = document.querySelector('aside');
+        const navAside = document.querySelector('.navbar-aside');
+
         asideOverlay.classList.add('transparentBcg');
         navAside.classList.add('showAside');
     }
 
     hidenCart(){
+
+        const cartOverlay = document.querySelector('.cart-overlay');
+        const cartDOM = document.querySelector('.cart');
+
         cartOverlay.classList.remove('transparentBcg');
         cartDOM.classList.remove('showCart');
     }
 
     hidenAside(){
+
+        const asideOverlay = document.querySelector('aside');
+        const navAside = document.querySelector('.navbar-aside');
+
         asideOverlay.classList.remove('transparentBcg');
         navAside.classList.remove('showAside');
     }
 
     populateCart(){
-        cart.forEach(item =>{
+        this.cart.forEach(item =>{
           this.addCartItem(item);
         });
     }
 
     cartLogic(){
         //clear cart button
-        clearCartBtn.addEventListener('click', ()=>{
+        this.clearCartBtn.addEventListener('click', ()=>{
             this.clearCart();
         });
 
-        cartContent.addEventListener('click', e=>{
+        this.cartContent.addEventListener('click', e=>{
 
             if(e.target.classList.contains('remove-item')){
 
                 let removeItem = e.target;
                 let id = removeItem.dataset.id;
 
-                cartContent.removeChild(removeItem.parentElement.parentElement);
+                this.cartContent.removeChild(removeItem.parentElement.parentElement);
                 this.removeItem(id);
 
             }else if(e.target.classList.contains('fa-chevron-up')){
 
                 let addAmount = e.target;
                 let id= addAmount.dataset.id;
-                let tempItem = cart.find(item => item.id === id);
+                let tempItem = this.cart.find(item => item.id === id);
                 tempItem.amount = tempItem.amount + 1;
 
-                Storage.saveCart(cart);
-                this.setCartValues(cart);
+                Storage.saveCart(this.cart);
+                this.setCartValues(this.cart);
                 addAmount.nextElementSibling.textContent = tempItem.amount;
 
             }else if(e.target.classList.contains('fa-chevron-down')){
 
                 let lowerAmount = e.target;
                 let id = lowerAmount.dataset.id;
-                let tempItem = cart.find(item => item.id === id);
+                let tempItem = this.cart.find(item => item.id === id);
                 tempItem.amount = tempItem.amount - 1;
 
                 if(tempItem.amount > 0){
-                    Storage.saveCart(cart);
-                    this.setCartValues(cart);
+                    Storage.saveCart(this.cart);
+                    this.setCartValues(this.cart);
                     lowerAmount.previousElementSibling.textContent = tempItem.amount;
 
                 }else{
-                    cartContent.removeChild(lowerAmount.parentElement.parentElement);
+                    this.cartContent.removeChild(lowerAmount.parentElement.parentElement);
                     this.removeItem(id);
                 }
             }
@@ -187,25 +221,25 @@ export class UI{
     }
 
     clearCart(){
-        let cartItems = cart.map(item => item.id);
+        let cartItems = this.cart.map(item => item.id);
         cartItems.forEach(id => this.removeItem(id));
-        while(cartContent.children.length > 0){
-            cartContent.removeChild(cartContent.children[0])
+        while(this.cartContent.children.length > 0){
+            this.cartContent.removeChild(this.cartContent.children[0])
         }
         this.hidenCart();
     }
 
     removeItem(id){
-        cart = cart.filter(item => item.id !== id);
-        this.setCartValues(cart);
-        Storage.saveCart(cart);
+        this.cart = this.cart.filter(item => item.id !== id);
+        this.setCartValues(this.cart);
+        Storage.saveCart(this.cart);
         let button = this.getSingleButton(id);
         button.disabled = false;
         button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to a cart`
     }
 
     getSingleButton(id){
-        return buttonsDom.find(button => button.dataset.id  === id);
+        return this.buttonsDom.find(button => button.dataset.id  === id);
     }
   
 }

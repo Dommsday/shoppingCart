@@ -15,7 +15,7 @@ class Kitchen{
                     const {title, price} = item.fields;
                     const {id} = item.sys;
                     const image = item.fields.image.fields.file.url;
-                    return{title, price, id,image};
+                    return{title, price, id, image};
                 })
 
                 const kitchenUI = new KitchenUI();

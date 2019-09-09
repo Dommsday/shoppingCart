@@ -1,7 +1,7 @@
 {
     "items": [
       {
-        "sys": { "id": "1" },
+        "sys": { "id": "1"},
         "fields": {
           "title": "Chambre Premium",
           "price": 800,
