@@ -1,10 +1,11 @@
 import {UI} from './ui.js';
 import { Storage } from './storage.js';
+import { BedroomUI } from './bedroomUI.js';
 
 class Products{
     getProducts(){
        try{
-            fetch('../../allProducts.json')
+            fetch('../src/json/allProducts.json')
             .then(response =>{
                 return response.json();
             })
@@ -19,11 +20,12 @@ class Products{
                 })
 
                 const ui = new UI;
+                const bedroomUI = new BedroomUI;
 
                 ui.displayProducts(products);
                 Storage.saveProducts(products);
-                ui.getBagButtons();
-                ui.cartLogic();
+                bedroomUI.cartLogic();
+
             })
        }catch(error){
            console.error(error)

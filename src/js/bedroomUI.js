@@ -4,7 +4,7 @@ import { Storage } from './storage.js';
 class Bedroom{
     getBedroomProducts(){
         try{
-            fetch("../../bedroomProducts.json")
+            fetch("../src/json/bedroomProducts.json")
             .then(response =>{
                 return response.json();
             })
@@ -30,7 +30,7 @@ class Bedroom{
     }
 }
 
-class BedroomUI extends UI{
+export class BedroomUI extends UI{
 
     displayBedroomProducts(products){
         let result = ' ';

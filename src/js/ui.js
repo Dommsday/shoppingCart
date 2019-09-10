@@ -68,7 +68,7 @@ export class UI{
                 e.target.disabled = true;
                 
 
-                let cartItem = {...Storage.getProduct(id), amount:1};
+                let cartItem = {...Storage.getProduct(id), amount: 1};
 
                 this.cart = [...this.cart, cartItem];
                 Storage.saveCart(this.cart);

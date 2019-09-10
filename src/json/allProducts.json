@@ -1,0 +1,141 @@
+{
+    "items": [
+      {
+        "sys": { "id": "1", "amount" : "1"},
+        "fields": {
+          "title": "Chambre Premium",
+          "price": 800,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-1.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "2", "amount" : "1" },
+        "fields": {
+          "title": "Chambre évasion",
+          "price": 900,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-2.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "3", "amount" : "1" },
+        "fields": {
+          "title": "Chambre parentale",
+          "price": 600,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-3.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "4", "amount" : "1" },
+        "fields": {
+          "title": "Chambre enfant",
+          "price": 200,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-4.jpeg" } } }
+        }
+      },
+      {
+        "sys": { "id": "5", "amount" : "1" },
+        "fields": {
+          "title": "Suite parentale",
+          "price": 1000,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-5.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "6", "amount" : "1" },
+        "fields": {
+          "title": "Chambre Dark",
+          "price": 1200,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-6.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "7", "amount" : "1" },
+        "fields": {
+          "title": "Chambre océane",
+          "price": 600,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-7.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "8", "amount" : "1" },
+        "fields": {
+          "title": "Chambre zen",
+          "price": 300,
+          "image": { "fields": { "file": { "url": "./src/images/bedroom/product-8.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "9", "amount" : "1" },
+        "fields": {
+          "title": "Cuisine Standard",
+          "price": 1700,
+          "image": { "fields": { "file": { "url": "./src/images/kitchen/product-1.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "10", "amount" : "1" },
+        "fields": {
+          "title": "Cuisine familiale",
+          "price": 2500,
+          "image": { "fields": { "file": { "url": "./src/images/kitchen/product-2.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "11", "amount" : "1" },
+        "fields": {
+          "title": "Cuisine snow",
+          "price": 1600,
+          "image": { "fields": { "file": { "url": "./src/images/kitchen/product-3.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "12", "amount" : "1" },
+        "fields": {
+          "title": "Cuisine Premimu plus",
+          "price": 3200,
+          "image": { "fields": { "file": { "url": "./src/images/kitchen/product-4.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "13", "amount" : "1" },
+        "fields": {
+          "title": "Salon Zen",
+          "price": 1200,
+          "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-1.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "14", "amount" : "1" },
+        "fields": {
+          "title": "Salon Premium",
+          "price": 5000,
+          "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-2.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "15", "amount" : "1" },
+        "fields": {
+          "title": "Salon Familial",
+          "price": 2500,
+          "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-3.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "16", "amount" : "1" },
+        "fields": {
+          "title": "Salon Deluxe",
+          "price": 6000,
+          "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-4.jpg" } } }
+        }
+      },
+      {
+        "sys": { "id": "17", "amount" : "1" },
+        "fields": {
+          "title": "Salon Fraîcheur",
+          "price": 3000,
+          "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-5.jpg" } } }
+        }
+      }
+    ]
+  }
+  

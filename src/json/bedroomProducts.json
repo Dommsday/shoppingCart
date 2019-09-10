@@ -1,0 +1,69 @@
+{
+    "items": [
+
+        {
+            "sys": { "id": "1", "amount" : "1"},
+            "fields": {
+              "title": "Chambre Premium",
+              "price": 800,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-1.jpeg" } } }
+            }
+        },
+        {
+            "sys": { "id": "2", "amount" : "1" },
+            "fields": {
+              "title": "Chambre évasion",
+              "price": 900,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-2.jpeg" } } }
+            }
+        },
+        {
+            "sys": { "id": "3", "amount" : "1" },
+            "fields": {
+              "title": "Chambre parentale",
+              "price": 600,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-3.jpeg" } } }
+            }
+        },
+        {
+            "sys": { "id": "4", "amount" : "1" },
+            "fields": {
+              "title": "Chambre enfant",
+              "price": 200,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-4.jpeg" } } }
+            }
+        },
+        {
+            "sys": { "id": "5", "amount" : "1" },
+            "fields": {
+              "title": "Suite parentale",
+              "price": 1000,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-5.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "6", "amount" : "1" },
+            "fields": {
+              "title": "Chambre Dark",
+              "price": 1200,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-6.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "7", "amount" : "1" },
+            "fields": {
+              "title": "Chambre océane",
+              "price": 600,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-7.jpg" } } }
+            }
+        },
+        {
+            "sys": { "id": "8", "amount" : "1" },
+            "fields": {
+              "title": "Chambre zen",
+              "price": 300,
+              "image": { "fields": { "file": { "url": "./src/images/bedroom/product-8.jpg" } } }
+            }
+        }
+    ]
+}

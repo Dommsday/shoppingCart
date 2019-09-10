@@ -4,7 +4,7 @@ import { Storage } from './storage.js';
 class Kitchen{
     getKitchenProducts(){
         try{
-            fetch('../../kitchenProducts.json')
+            fetch('../src/json/kitchenProducts.json')
             .then(response =>{
                 return response.json();
                 

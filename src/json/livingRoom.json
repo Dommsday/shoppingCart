@@ -1,0 +1,44 @@
+{
+    "items":[
+        {
+            "sys": { "id": "13", "amount" : "1" },
+            "fields": {
+              "title": "Salon Zen",
+              "price": 1200,
+              "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-1.jpg" } } }
+            }
+          },
+          {
+            "sys": { "id": "14", "amount" : "1" },
+            "fields": {
+              "title": "Salon Premium",
+              "price": 5000,
+              "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-2.jpg" } } }
+            }
+          },
+          {
+            "sys": { "id": "15", "amount" : "1" },
+            "fields": {
+              "title": "Salon Familial",
+              "price": 2500,
+              "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-3.jpg" } } }
+            }
+          },
+          {
+            "sys": { "id": "16", "amount" : "1" },
+            "fields": {
+              "title": "Salon Deluxe",
+              "price": 6000,
+              "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-4.jpg" } } }
+            }
+          },
+          {
+            "sys": { "id": "17", "amount" : "1" },
+            "fields": {
+              "title": "Salon Fraîcheur",
+              "price": 3000,
+              "image": { "fields": { "file": { "url": "./src/images/livingRoom/product-5.jpg" } } }
+            }
+          }
+    ]
+}
