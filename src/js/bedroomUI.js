@@ -1,43 +1,41 @@
 import { UI } from './ui.js';
 import { Storage } from './storage.js';
 
-class Kitchen{
-    getKitchenProducts(){
+class Bedroom{
+    getBedroomProducts(){
         try{
-            fetch('../../kitchenProducts.json')
+            fetch("../../bedroomProducts.json")
             .then(response =>{
                 return response.json();
-                
             })
             .then(data =>{
-                let kitchenProducts = data.items;
-            
-                kitchenProducts = kitchenProducts.map(item=>{
+                let bedroomProducts = data.items;
+
+                bedroomProducts = bedroomProducts.map(item=>{
                     const {title, price} = item.fields;
                     const {id, amount} = item.sys;
                     const image = item.fields.image.fields.file.url;
-                    return{title, price, id, amount,image};
+                    return {title, price, id, amount, image};
                 })
 
-                const kitchenUI = new KitchenUI();
-
-                kitchenUI.displayKitchenProducts(kitchenProducts);
-                Storage.saveProducts(kitchenProducts);
-                kitchenUI.getBagButtons();
-                kitchenUI.cartLogic();
-            })   
+                const bedroomUI = new BedroomUI();
+                bedroomUI.displayBedroomProducts(bedroomProducts);
+                Storage.saveProducts(bedroomProducts);
+                bedroomUI.getBagButtons();
+                bedroomUI.cartLogic();
+            })
         }catch(error){
-            console.error(error);
+            console.log(error)
         }
-        
     }
 }
 
-class KitchenUI extends UI{
+class BedroomUI extends UI{
 
-    displayKitchenProducts(products){
+    displayBedroomProducts(products){
         let result = ' ';
-        products.map(product => {
+
+        products.map(product =>{
             result +=`
             <article class="product">
                 <div class="img-container">
@@ -52,19 +50,19 @@ class KitchenUI extends UI{
 
         const productsDOM = document.querySelector('.products-center');
         productsDOM.innerHTML = result;
-
     }
-
 }
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", ()=>{
 
-    const kitchen = new Kitchen()
-    const kitchenUI = new KitchenUI();
+    const bedroom = new Bedroom();
+    const bedroomUI = new BedroomUI();
 
-    //get kitchen products
-    kitchen.getKitchenProducts();
+    //get bedroom products
+    bedroom.getBedroomProducts();
 
-    //setup kitchen
-    kitchenUI.setupApp();
+    //setup bedroom
+    bedroomUI.setupApp();
+
 });
+

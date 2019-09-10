@@ -1,22 +1,5 @@
 import { Storage } from './storage.js';
 
-// const productsDOM = document.querySelector('.products-center');
-// const cartTotal = document.querySelector('.cart-total');
-// const cartItems = document.querySelector('.cart-items');
-// const cartContent = document.querySelector('.cart-content');
-// const cartBtn = document.querySelector('.cart-btn');
-// const navIconBar = document.querySelector('.nav-icon-bar');
-// const clearCartBtn = document.querySelector('.clear-cart');
-// const cartOverlay = document.querySelector('.cart-overlay');
-// const asideOverlay = document.querySelector('aside');
-// const navAside = document.querySelector('.navbar-aside');
-// const cartDOM = document.querySelector('.cart');
-// const closeCartBtn = document.querySelector('.close-cart');
-// const closeAside = document.querySelector('.close-aside');
-
-// let buttonsDom = [];
-// let cart= [];
-
 export class UI{
 
     constructor(){
@@ -57,7 +40,7 @@ export class UI{
             <article class="product">
                 <div class="img-container">
                     <img src=${product.image} alt="product" class="product-img">
-                    <button class="bag-btn" data-id=${product.id}><i class="fas fa-shopping-cart"></i>add to cart</button>
+                    
                 </div>
                 <h3>${product.title}</h3>
                 <h4>${product.price}€</h4>

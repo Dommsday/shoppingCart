@@ -1,43 +1,41 @@
 import { UI } from './ui.js';
 import { Storage } from './storage.js';
 
-class Kitchen{
-    getKitchenProducts(){
+class LivingRoom{
+    getLivingRoomProducts(){
         try{
-            fetch('../../kitchenProducts.json')
+            fetch('../../livingRoom.json')
             .then(response =>{
                 return response.json();
-                
             })
-            .then(data =>{
-                let kitchenProducts = data.items;
-            
-                kitchenProducts = kitchenProducts.map(item=>{
+            .then(data=>{
+                let livingRoomProducts = data.items;
+
+                livingRoomProducts = livingRoomProducts.map(item=>{
                     const {title, price} = item.fields;
                     const {id, amount} = item.sys;
                     const image = item.fields.image.fields.file.url;
-                    return{title, price, id, amount,image};
+                    return {title, price, id, amount, image};
                 })
 
-                const kitchenUI = new KitchenUI();
-
-                kitchenUI.displayKitchenProducts(kitchenProducts);
-                Storage.saveProducts(kitchenProducts);
-                kitchenUI.getBagButtons();
-                kitchenUI.cartLogic();
-            })   
+                const livingRoomUI = new LivingRoomUI();
+                livingRoomUI.displayLivingRoomProducts(livingRoomProducts);
+                Storage.saveProducts(livingRoomProducts);
+                livingRoomUI.getBagButtons();
+                livingRoomUI.cartLogic();
+            })
         }catch(error){
-            console.error(error);
+            console.log(error)
         }
-        
     }
 }
 
-class KitchenUI extends UI{
+class LivingRoomUI extends UI{
 
-    displayKitchenProducts(products){
+    displayLivingRoomProducts(products){
         let result = ' ';
-        products.map(product => {
+
+        products.map(product =>{
             result +=`
             <article class="product">
                 <div class="img-container">
@@ -52,19 +50,18 @@ class KitchenUI extends UI{
 
         const productsDOM = document.querySelector('.products-center');
         productsDOM.innerHTML = result;
-
     }
-
 }
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", ()=>{
 
-    const kitchen = new Kitchen()
-    const kitchenUI = new KitchenUI();
+    const livingRoom = new LivingRoom();
+    const livingRoomUI = new LivingRoomUI();
 
-    //get kitchen products
-    kitchen.getKitchenProducts();
+    //get livingRoom products
+    livingRoom.getLivingRoomProducts();
 
-    //setup kitchen
-    kitchenUI.setupApp();
+    //setup livingRoom
+    livingRoomUI.setupApp();
+
 });
