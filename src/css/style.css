@@ -446,4 +446,36 @@ aside{
 /*END PART CART
 =============================*/
 
+/*PART FOOTER
+===============================*/
+footer{
+    background: var(--mainLightBeige);
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.container-footer{
+    padding: 1rem 0;
+}
+
+.link-socials{
+    font-size: 26px;
+    padding: 0 1rem;
+}
+
+.copyright p{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.mention a{
+    font-weight: 900;
+}
+
+
+/*END PART FOOTER
+===============================*/
+
 
