@@ -26,6 +26,7 @@ body{
 
 a{
     text-decoration: none;
+    color: var(--mainBlack);
 }
 
 a:hover{
@@ -163,11 +164,27 @@ aside{
 =======================*/
 .ban{
     min-height: calc(100vh - 60px);
-    background: url(../images/ban.jpg) center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.banMain{
+    background: url(../images/ban.jpg) center/cover no-repeat;
+}
+
+.banBedroom{
+    background: url(../images/bedroom/product-1.jpeg) center/cover no-repeat;
+}
+
+.banKitchen{
+    background: url(../images/kitchen/product-1.jpg) center/cover no-repeat;
+}
+
+.banLivingRoom{
+    background: url(../images/livingRoom/product-1.jpg) center/cover no-repeat;
+}
+
 
 .banner{
     text-align: center;
@@ -193,18 +210,6 @@ aside{
     border: 1px solid var(--primaryColor);
     transition: var(--mainTrainsition);
     cursor: pointer;
-}
-
-.banner-btn a{
-    text-decoration: none;
-}
-
-.banner-btn a:hover{
-    color: var(--mainBlack);
-}
-
-.banner-btn a:visited{
-    color: var(--mainBlack);
 }
 
 .banner-btn:hover{
