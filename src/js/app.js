@@ -2,7 +2,7 @@ import {UI} from './ui.js';
 import { Storage } from './storage.js';
 import { BedroomUI } from './bedroomUI.js';
 
-class Products{
+class Products extends UI{
     getProducts(){
        try{
             fetch('../src/json/allProducts.json')
@@ -21,10 +21,11 @@ class Products{
 
                 const ui = new UI;
                 const bedroomUI = new BedroomUI;
-
+                
                 ui.displayProducts(products);
-                Storage.saveProducts(products);
                 bedroomUI.cartLogic();
+                //ui.cartLogic();
+                Storage.saveProducts(products);
 
             })
        }catch(error){
@@ -36,10 +37,10 @@ class Products{
 document.addEventListener("DOMContentLoaded", () =>{
 
     const products = new Products();
-    const ui = new UI();
-    //setup app
-    ui.setupApp();
-
+    const ui = new UI;
+    
+    //ui.setupApp();
     //get all products
     products.getProducts();
+    
 });

@@ -51,6 +51,7 @@ export class BedroomUI extends UI{
         const productsDOM = document.querySelector('.products-center');
         productsDOM.innerHTML = result;
     }
+
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{

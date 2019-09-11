@@ -40,7 +40,6 @@ export class UI{
             <article class="product">
                 <div class="img-container">
                     <img src=${product.image} alt="product" class="product-img">
-                    
                 </div>
                 <h3>${product.title}</h3>
                 <h4>${product.price}€</h4>
